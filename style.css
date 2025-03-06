@@ -1,27 +1,75 @@
-
-
-
-
-.redBorder {
-    border: red dashed 2px;
-    border-radius: 10px;
-
-    font-family: "Comic Sans";
-    font-size: 16px;
-    color: red;
-
-    margin: 20px;
-    padding: 10px;
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
 
 .container {
+    width: 90%;
+    padding: 10px;
+    max-width: 800px;
     display: flex;
+    border-radius: 15px;
     flex-direction: column;
+    background-color: rgb(186, 255, 194);
 }
 
 
 .element {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 }
+
+
+.redBorder {
+    border: red dashed 2px;
+    border-radius: 15px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 18px;
+    color: red;
+    background-color: rgb(186, 255, 194); 
+    margin: 20px;
+    padding: 10px 15px;
+}
+
+
+.element.redBorder {
+    flex-direction: column;
+    min-height: 20px;
+    text-align: center;
+} 
+
+
+input{
+    width: 40%;
+}
+
+input:focus, select:focus {
+    outline: none; 
+    border: red dashed 2px; 
+}
+
+
+.result-prev {
+    color: rgb(200, 123, 123);
+}
+
+
+@media only screen and (max-width: 768px){
+    .element {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .redBorder {
+        margin: 10px;
+    }
+
+    input, button{
+        width: 40%;
+    }
+}
+
